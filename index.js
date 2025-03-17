@@ -1,26 +1,24 @@
-const menuBtn = document.getElementById("menu-btn");
-const nav = document.getElementById("nav");
-const exit = document.getElementById("exit-btn");
+// javascript
 
-function openNav(e) {
-  e.preventDefault();
-  nav.classList.add('open-nav');
-}
+const get = element => document.getElementById(element);
 
-function closeNav(e) {
-  e.preventDefault();
-  nav.classList.remove('open-nav');
-}
+let open = get("menu-btn");
+let nav = get("nav");
+let exit = get("exit-btn");
 
-menuBtn.addEventListener('click', openNav);
-menuBtn.addEventListener('touchstart', openNav);
+open.addEventListener('click', () => {
+    nav.classList.add('open-nav');
+})
 
-exit.addEventListener('click', closeNav);
-exit.addEventListener('touchstart', closeNav);
+exit.addEventListener('click', () => {
+    nav.classList.remove('open-nav');
+})
+
+
 // show viewport width
 
 let width = document.getElementById('width');
-const onresize = function() {
+var onresize = function() {
    //your code here
    //this is just an example
    width.innerText = document.body.clientWidth;
