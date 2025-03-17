@@ -2,16 +2,21 @@ const menuBtn = document.getElementById("menu-btn");
 const nav = document.getElementById("nav");
 const exit = document.getElementById("exit-btn");
 
-menuBtn.addEventListener('click', () => {
-    nav.classList.add('open-nav');
-});
+function openNav(e) {
+  e.preventDefault();
+  nav.classList.add('open-nav');
+}
 
-exit.addEventListener('click', () => {
-    nav.classList.remove('open-nav');
-});
+function closeNav(e) {
+  e.preventDefault();
+  nav.classList.remove('open-nav');
+}
 
+menuBtn.addEventListener('click', openNav);
+menuBtn.addEventListener('touchstart', openNav);
 
-
+exit.addEventListener('click', closeNav);
+exit.addEventListener('touchstart', closeNav);
 // show viewport width
 
 let width = document.getElementById('width');
