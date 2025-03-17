@@ -1,10 +1,9 @@
-// javascript
-
 const get = element => document.getElementById(element);
 
-let open = get("menu-btn");
-let nav = get("nav");
-let exit = get("exit-btn");
+
+const open = document.getElementById("menu-btn");
+const nav = document.getElementById("nav");
+const exit = document.getElementById("exit-btn");
 
 open.addEventListener('click', () => {
     nav.classList.add('open-nav');
@@ -18,7 +17,7 @@ exit.addEventListener('click', () => {
 // show viewport width
 
 let width = document.getElementById('width');
-var onresize = function() {
+const onresize = function() {
    //your code here
    //this is just an example
    width.innerText = document.body.clientWidth;
